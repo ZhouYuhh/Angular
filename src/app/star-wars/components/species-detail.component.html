@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-title>
+    Classification: {{item?.classification | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Hair Color(s): {{item?.hair_colors | titlecase}}
+  </mat-card-title>
+
+  <mat-card-title>
+    Homeworld: {{homeworld?.name}}
+  </mat-card-title>
+
+
+
+  <mat-card-title>
+    Average Height: {{item?.average_height}}cm
+  </mat-card-title>
+
+  <mat-card-title>
+    Average Lifespan:
+      <span *ngIf="item?.average_lifespan === 'unknown'">{{item?.average_lifespan | titlecase}}</span>
+      <span *ngIf="item?.average_lifespan !== 'unknown'">{{item?.average_lifespan | number : '.'}} years</span>
+  </mat-card-title>
+
+  <mat-card-title>
+    Designation: {{item?.designation | titlecase}}
+  </mat-card-title>
+
+  <mat-card-title>
+    Skin Color(s): {{item?.skin_colors | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Eye Color(s): {{item?.eye_colors | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Language: {{item?.language | titlecase}}
+  </mat-card-title>
+
+</mat-card>

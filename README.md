@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 # Angular
+=======
+# testb
+>>>>>>> note

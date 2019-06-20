@@ -1,0 +1,15 @@
+
+
+
+.mat-card {
+  justify-content:center;
+widows: 400px;
+height:auto;
+  text-align: left;
+  border:3px solid #000;
+}
+
+.mat-card-title {
+  font-size: 16px;
+}
+

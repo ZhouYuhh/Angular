@@ -1,0 +1,10 @@
+
+<mat-card>
+  <mat-card-title> Episode No. {{ item?.episode_id }} </mat-card-title> 
+  <mat-card-title> Title: {{ item?.title }} </mat-card-title>
+  <mat-card-title> Director: {{ item?.director }} </mat-card-title>
+  <mat-card-title> Producer: {{ item?.producer }} </mat-card-title>
+  <mat-card-title> Release Date: {{ item?.release_date | date: 'fullDate' }}  </mat-card-title>
+    <mat-card-title> Opening Crawl </mat-card-title>
+    <mat-card-content> {{ item?.opening_crawl }} </mat-card-content>
+  </mat-card>

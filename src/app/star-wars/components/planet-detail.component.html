@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>
+    {{item?.name}}
+  </mat-card-title>
+  <mat-card-title>
+    Rotation Period: {{item?.rotation_period}} days
+  </mat-card-title>
+  <mat-card-title>
+    Diameter： {{item?.diameter | number: '.'}}km
+  </mat-card-title>
+  <mat-card-title>
+    Population： <span *ngIf="item?.population === 'unknown'">{{item?.population | titlecase}}</span>
+    <span *ngIf="item?.population !== 'unknown'">{{item?.population | number: '.'}}</span>
+  </mat-card-title>
+  <mat-card-title>
+    Gravity： {{item?.gravity | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Surface Water： <span *ngIf="item?.surface_water === 'unknown'">{{item?.surface_water | titlecase}}</span>
+    <span *ngIf="item?.surface_water !== 'unknown'">{{item?.surface_water | number: '.'}}%</span>
+  </mat-card-title>
+  <mat-card-title>
+    Orbital Period： {{item?.orbital_period}} days
+  </mat-card-title>
+  <mat-card-title>
+    Terrain： {{item?.terrain | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Climate： {{item?.climate | titlecase}}
+  </mat-card-title>
+</mat-card>

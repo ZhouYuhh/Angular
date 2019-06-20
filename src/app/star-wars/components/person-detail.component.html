@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>
+   {{item?.name}}
+  </mat-card-title>
+  <mat-card-title>
+      Birth Year:{{item?.birth_year | uppercase}}
+    </mat-card-title>
+    <mat-card-title>
+      Species: 
+        <span *ngIf="species?.length == 0">This character has no related species</span>
+        <span *ngFor="let s of species" >
+             {{s.name}} 
+        </span>
+    </mat-card-title>
+    <mat-card-title>
+        Height:{{item?.height}}cm
+      </mat-card-title>
+      <mat-card-title>
+          Mass:
+             <span *ngIf="item?.mass === 'unknown'">{{item?.mass | titlecase}}</span>
+             <span *ngIf="item?.mass !== 'unknown'">{{item?.mass | number : '.'}}kg</span>   
+         </mat-card-title>
+       <mat-card-title>
+            Gender:  {{item?.gender | titlecase}}
+       </mat-card-title>
+       <mat-card-title>
+          Hair Color: {{item?.hair_color | titlecase}}
+        </mat-card-title>
+        <mat-card-title>
+            Skin Color: {{item?.skin_color | titlecase}}
+        </mat-card-title>
+        <mat-card-title>
+            Homeworld: {{homeworld?.name}}
+          </mat-card-title>
+        </mat-card>

@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+  <a mat-icon-button href="{{ category }}/{{ id }}"
+    ><mat-icon>chevron_left</mat-icon></a
+  >
+  <span id="titlefortest">
+    Comments of {{ showName() }} 
+  </span>
+</mat-toolbar>
+<div class="container" fxLayout="column wrap" fxLayoutGap="10px">
+  <div *ngFor="let comment of comments">
+    <mat-card *ngIf="comment.active"
+      ><mat-card-subtitle style="text-align: right"
+        ><mat-icon (click)="removeComment(comment)" title="delete"
+          >delete</mat-icon
+        ></mat-card-subtitle
+      ><mat-card-content>{{ comment.text }}</mat-card-content
+      ><mat-card-footer
+        style="font-size: small; font-weight: lighter; text-align: right; padding: 10px"
+        >{{ comment.date | date: 'medium' }}</mat-card-footer
+      ></mat-card
+    >
+  </div>
+  <mat-card
+    ><form #commentForm="ngForm" (ngSubmit)="onSubmit()" style="display: flex">
+      <mat-form-field style="flex-grow: 1">
+        <textarea id="Comment"
+          name="text"
+          matInput
+          placeholder="Leave a comment"
+          ngModel
+          required
+        ></textarea>
+      </mat-form-field>
+      <button
+        type="submit"
+        mat-icon-button
+        color="accent"
+        style="vertical-align: middle"
+        [disabled]="commentForm.invalid"
+        onclick="
+        document.getElementById('Comment').value = null;"
+      >
+        <mat-icon title="submit">send</mat-icon>
+      </button>
+    </form></mat-card
+  >
+</div>
+

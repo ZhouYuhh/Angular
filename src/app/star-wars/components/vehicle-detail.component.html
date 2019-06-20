@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>
+    {{item?.name}}
+  </mat-card-title>
+  <mat-card-title>
+    Maximum Atmospheric Speed：    {{item?.max_atmosphering_speed | number: '.'}}km/h
+  </mat-card-title>
+  <mat-card-title>
+    Manufacturer：     {{item?.manufacturer}}
+  </mat-card-title>
+  <mat-card-title>
+    Cargo Capacity：    {{item?.cargo_capacity | number: '.'}}kg
+  </mat-card-title>
+  <mat-card-title>
+    Consumables：  {{item?.consumables | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Model：     {{item?.model | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Crew：    {{item?.crew | number: '.'}}
+  </mat-card-title>
+  <mat-card-title>
+    Cost： <span *ngIf="item?.cost_in_credits === 'unknown'">{{item?.cost_in_credits | titlecase}}</span>
+    <span *ngIf="item?.cost_in_credits !== 'unknown'">{{item?.cost_in_credits | number: '.'}} credits</span>
+  </mat-card-title>
+  <mat-card-title>
+    Length：   {{item?.length | number: '.'}}m
+  </mat-card-title>
+  <mat-card-title>
+    Maximum Passengers：    {{item?.passengers | number: '.'}}
+  </mat-card-title>
+</mat-card>

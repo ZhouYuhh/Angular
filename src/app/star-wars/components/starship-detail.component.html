@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-title>
+    {{item?.name | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Maximum Atmospheric Speed:
+    <span *ngIf="item?.max_atmosphering_speed === 'n/a'">{{item?.max_atmosphering_speed}}</span>
+    <span>{{item?.max_atmosphering_speed | number: '.'}}</span>
+  </mat-card-title>
+  <mat-card-title>
+    Starship Class: {{item?.starship_class | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    MGLT: <span *ngIf="item?.MGLT === 'unknown'">{{item?.MGLT | titlecase}}</span>
+    <span>{{item?.MGLT | number: '.'}}</span>
+  </mat-card-title>
+  <mat-card-title>
+    Manufacturer: {{item?.manufacturer | titlecase}}
+  </mat-card-title>
+  <mat-card-title>
+    Consumables: {{item?.consumables}}
+  </mat-card-title>
+  <mat-card-title>
+    Model: {{item?.model}}
+  </mat-card-title>
+  <mat-card-title>
+    Crew: {{item?.crew | number: '.'}}
+  </mat-card-title>
+  <mat-card-title>
+    Cost: {{item?.cost_in_credits | number: '.'}} credits
+  </mat-card-title>
+  <mat-card-title>
+    Length: {{item?.length | number: '.' }}m
+  </mat-card-title>
+  <mat-card-title>
+    Hyperdrive Rating: {{item?.hyperdrive_rating}}
+  </mat-card-title>
+  <mat-card-title>
+    Passengers: {{item?.passengers | number: '.'}}
+  </mat-card-title>
+</mat-card>
